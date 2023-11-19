@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { Card, Loader, Image } from 'semantic-ui-react';
+import { Button, Icon, Label, Card, Loader, Image } from 'semantic-ui-react';
 import styles from '@/styles/Pokemon.module.css';
 
 export default function PokemonNamePage() {
@@ -47,6 +47,17 @@ export default function PokemonNamePage() {
                         </>
                         )
                     }
+                    <div className='likeBtn'>
+                        <Button as='div' labelPosition='right'>
+                            <Button color='red'>
+                                <Icon name='heart' />
+                                Like
+                            </Button>
+                            <Label as='a' basic color='red' pointing='left'>
+                                2,048
+                            </Label>
+                        </Button> 
+                    </div>
                 </Card>
             </div>
         </>
